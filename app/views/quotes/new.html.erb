@@ -1,9 +1,9 @@
 <h1>Add a quote</h1>
 
-<%= form_for :quote do |q| %>
+<%= form_for :quote, url: quotes_path do |q| %>
   <p>
     <%= q.label :date %><br>
-    <%= q.text_field :date %>
+    <%= q.date_field :date %>
   </p>
 
   <p>
