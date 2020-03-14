@@ -1,7 +1,8 @@
 <h1>Quotes</h1>
+<br>
 
 <% @quotes.each do |quote| %>
-  <h1><%= quote.id %>. <%= quote.body %></h1>
-  <h3>- <%= quote.author %></h3>
-  <h4><%= quote.date %></h4>
+  <h3><%= quote.id %>. <%= quote.body %></h3>
+  <h5>- <%= quote.author %></h5>
+  <br>
 <% end %>
