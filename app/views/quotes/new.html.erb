@@ -1,22 +1,28 @@
 <h1>Add a quote</h1>
 
 <%= form_for :quote, url: quotes_path do |q| %>
+  <% if @quote.errors.any? %>
+    <% @quote.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+
   <p>
     <%= q.label :date %><br>
-    <%= q.date_field :date %>
+    <%= q.date_field(:date, { :class => "form-control" }) %>
   </p>
 
   <p>
     <%= q.label :author %><br>
-    <%= q.text_field :author %>
+    <%= q.text_field(:author, { :class => "form-control" }) %>
   </p>
 
   <p>
     <%= q.label :body %><br>
-    <%= q.text_area :body %>
+    <%= q.text_area(:body, { :class => "form-control" }) %>
   </p>
 
   <p>
-    <%= q.submit %>
+    <%= q.submit({ :class => "btn btn-primary" }) %>
   </p>
 <% end %>
