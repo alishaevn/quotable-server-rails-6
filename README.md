@@ -10,3 +10,6 @@ A RESTful API, created by myself, to handle the requests from the client portion
 ### Server Tech Stack
 - Ruby
 - Rails
+
+### App Screenshots
+![Server Tech Stack](./app/assets/images/quotable_readme.png?raw=true "Server Tech Stack")
