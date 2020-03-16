@@ -1,24 +1,12 @@
-# README
+# Quotable
+A React Native app that shows users a new quote every day
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Client repo
+https://github.com/alishaevn/quotable
 
-Things you may want to cover:
+### API Documentation
+A RESTful API, created by myself, to handle the requests from the client portion of Quotable.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Server Tech Stack
+- Ruby
+- Rails
