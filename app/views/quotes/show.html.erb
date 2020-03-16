@@ -1,9 +1,22 @@
-<h1><%= @quote.body %><h1>
-<h4><%= @quote.author %><h4>
-<p><%= @quote.date %><p>
+<h1>
+  <%= @quote.body %>
+</h1>
+<div class="pt-3">
+  <h4 class="d-inline">
+    - <%= @quote.author %>
+  </h4>
+  <h4 class="d-inline float-right">
+    <%= @quote.date %>
+  </h4>
+<div>
 <hr>
-<%= link_to "Edit", edit_quote_path(@quote), :class => 'btn btn-default' %>
-<%= link_to "Delete", quote_path(@quote),
+
+<%= link_to "Edit",
+  edit_quote_path(@quote),
+  :class => 'btn btn-default'
+%>
+<%= link_to "Delete",
+  quote_path(@quote),
   :class => 'btn btn-default',
   method: :delete,
   data: { confirm: 'Are you sure?' }
