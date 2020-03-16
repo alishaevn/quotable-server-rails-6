@@ -3,10 +3,6 @@ class QuotesController < ApplicationController
     @quotes = Quote.all
   end
 
-  def show
-    @quote = Quote.find(params[:id])
-  end
-
   def new
     @quote = Quote.new
   end
@@ -17,6 +13,24 @@ class QuotesController < ApplicationController
       redirect_to @quote
     else
       render 'new'
+    end
+  end
+
+  def show
+    @quote = Quote.find(params[:id])
+  end
+
+  def edit
+    @quote = Quote.find(params[:id])
+  end
+
+  def update
+    @quote = Quote.find(params[:id])
+
+    if (@quote.update(quote_params))
+      redirect_to @quote
+    else
+      render 'edit'
     end
   end
 

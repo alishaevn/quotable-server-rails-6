@@ -1,3 +1,5 @@
 <h1><%= @quote.body %><h1>
 <h4><%= @quote.author %><h4>
 <p><%= @quote.date %><p>
+<hr>
+<%= link_to "Edit", edit_quote_path(@quote), :class => 'btn btn-default' %>
