@@ -1,14 +1,9 @@
 <h1>
   <%= @quote.body %>
 </h1>
-<div class="pt-3">
-  <h4 class="d-inline">
-    - <%= @quote.author %>
-  </h4>
-  <h4 class="d-inline float-right">
-    <%= @quote.date %>
-  </h4>
-<div>
+<h4 class="pt-3">
+  - <%= @quote.author %>
+</h4>
 <hr>
 
 <%= link_to "Edit",
