@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :quotes
   resources :users, only: [:new, :create]
 
+  get 'authorized', to: 'sessions#page_requires_login'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'sessions/new'
